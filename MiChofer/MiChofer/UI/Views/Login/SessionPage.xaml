@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MiChofer.UI.Views.Login.SessionPage"
+             xmlns:local="clr-namespace:MiChofer.UI.CustomRenderer"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             >
+
+
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient IsRotationTopToBottom="True">
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
+            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+ 
+
+        <StackLayout>
+            
+            <Image Margin="30" Source="logo_bg_red.png" WidthRequest="100" HeightRequest="100"/>
+
+            <local:ImageEntry 
+                        PlaceholderColor="#CCC" FontSize="17"
+                        Image="mail" ImageWidth="15" ImageHeight="15"
+                        Placeholder="Correo electronico" BGColor="White" CornerRadius="20"
+                        Keyboard="Email"
+                        HorizontalOptions="FillAndExpand" Margin="20,5" HeightRequest="40"/>
+            <local:ImageEntry 
+                        PlaceholderColor="#CCC" FontSize="17"
+                        Image="lock" ImageWidth="15" ImageHeight="15"
+                        IsPassword="True"
+                        Keyboard="Numeric"
+                        Placeholder="Contraseña" BGColor="White" CornerRadius="20"
+                        HorizontalOptions="FillAndExpand" Margin="20,5" HeightRequest="40"/>
+
+
+            <Button Text="INICIAR SESIÓN" FontSize="13" BorderRadius="48" TextColor="White" BackgroundColor="Red" HorizontalOptions="FillAndExpand" Margin="20,15" Clicked="Button_Clicked"/>
+        
+
+            
+
+
+    </StackLayout>
+
+    
+
+</ContentPage>

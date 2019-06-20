@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             x:Class="MiChofer.UI.Views.Login.Clientes.MenuPedidoPage">
+
+
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient IsRotationTopToBottom="True">
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
+            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"/>
+                <ColumnDefinition Width="7.5*"/>
+            </Grid.ColumnDefinitions>
+
+            <!--<ScrollView Orientation="Vertical" Grid.Column="1" >-->
+            <StackLayout Margin="-80,40,40,20" Grid.Column="1"  HorizontalOptions="Fill" VerticalOptions="FillAndExpand" >
+                <Label Text="Menú" HorizontalOptions="Start" FontSize="20"  FontAttributes="Bold" TextColor="Black" />
+
+                <ListView x:Name="lista" ItemsSource="{Binding items}" RowHeight="180" SeparatorVisibility="None" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<TextCell Text="{Binding Title}"/>-->
+                            <ViewCell>
+                                <Frame CornerRadius="5" Margin="0,8" Padding="10,0" OutlineColor="Black" HasShadow="True" >
+
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"/>
+                                            <ColumnDefinition Width="7*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <!--<StackLayout Margin="0,0" Padding="0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">-->
+                                        <Frame CornerRadius="10" Margin="0,0" Padding="0,0" VerticalOptions="Center" HasShadow="True" >
+                                            <Image Source="{ Binding Img}" Grid.Column="0" Margin="0,0"/>
+                                        </Frame>
+                                        <!--</StackLayout>-->
+
+
+                                        <StackLayout Grid.Column="1" Padding="10, 10, 0, 0" Margin="0,0" VerticalOptions="Center" Spacing="0">
+                                            <Label Text="{Binding Title}" TextColor="Black"/>
+                                            <Label Text="{ Binding Price}"  TextColor="#868686"/>
+                                            <numeric:SfNumericUpDown x:Name="numeric" Value="1" FormatString="n" />
+                                            <Button Text="añadir pedido" TextColor="#7AB338" BackgroundColor="White"  BorderWidth="1" CornerRadius="5" BorderColor="#7AB338"  />
+
+                                        </StackLayout>
+
+                                    </Grid>
+
+                                </Frame>
+
+
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!--</ScrollView>-->
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

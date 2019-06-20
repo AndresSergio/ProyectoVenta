@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="MiChofer.UI.Views.Login.Clientes.Lista_de_clientes">
+
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient IsRotationTopToBottom="True">
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
+            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"/>
+                <ColumnDefinition Width="7.5*"/>
+            </Grid.ColumnDefinitions>
+
+           
+
+            <!--<ScrollView Orientation="Vertical" Grid.Column="1" >-->
+            <StackLayout Margin="-80,10,40,0" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" >
+                <Button Text="Crear nuevo cliente" HorizontalOptions="End" FontSize="15" BackgroundColor="#c63b3f" BorderColor="Black" Clicked="Button_Clicked"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                   
+                    <Label Text="Nombre" Grid.Column="0" TextColor="White"/>
+                    <Label Text="Apellido" Grid.Column="1" TextColor="White"/>
+                    <Label Text="Carnet" Grid.Column="2" TextColor="White"/>
+                    <Label Text="Telefono" Grid.Column="3" TextColor="White"/>
+                    <Label Text="Direccion" Grid.Column="4" TextColor="White"/>
+                   
+
+                </Grid>
+                <ListView x:Name="listadeclientes" ItemsSource="{Binding itemClientes}" RowHeight="50" SeparatorVisibility="None" BackgroundColor="Transparent">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <!--<TextCell Text="{Binding Title}"/>-->
+                            <ViewCell>
+                                <Frame CornerRadius="5" Margin="0,8" Padding="10,0" OutlineColor="Black" HasShadow="True" >
+
+                                    
+                                        
+
+                                     <ScrollView Orientation="Horizontal">
+                                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="2*"/>
+                                                    <ColumnDefinition Width="2*"/>
+
+                                                </Grid.ColumnDefinitions>
+                                                <!--<StackLayout Margin="0,0" Padding="0,0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">-->
+                                                <StackLayout Margin="0,0" Padding="0,0" Grid.Column="0" VerticalOptions="CenterAndExpand" >
+                                            
+                                                    <Label Text="{Binding Nombre}" TextColor="Black" HeightRequest="20"/>
+                                                </StackLayout>
+
+                                                <StackLayout Margin="0,0" Padding="-15,0" Grid.Column="1" VerticalOptions="CenterAndExpand" >
+
+                                                    <Label Text="{Binding Apellido}" TextColor="Black" HeightRequest="20"/>
+                                                </StackLayout>
+
+                                                <StackLayout Margin="0,0" Padding="-30,0" Grid.Column="2" VerticalOptions="CenterAndExpand" >
+
+                                                    <Label Text="{Binding Carnet}" TextColor="Black" HeightRequest="20"/>
+                                                </StackLayout>
+
+                                                <StackLayout Margin="0,0" Padding="-40,0" Grid.Column="3" VerticalOptions="CenterAndExpand" >
+
+                                                    <Label Text="{Binding Telefono}" TextColor="Black" HeightRequest="20"/>
+                                                </StackLayout>
+
+                                                <StackLayout Margin="0,0" Padding="-40,0" Grid.Column="4" VerticalOptions="CenterAndExpand" >
+                                            
+                                                    <Label Text="{Binding Direccion}" TextColor="Black" HeightRequest="20"/>
+                                                </StackLayout>
+                                            </Grid>
+                                        </StackLayout>
+
+                                        </ScrollView>
+                                        <!--</StackLayout>-->
+
+
+
+                                    
+
+                                </Frame>
+
+
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!--</ScrollView>-->
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

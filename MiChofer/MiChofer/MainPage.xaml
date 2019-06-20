@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MiChofer"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="MiChofer.MainPage">
+    
+    <!--<StackLayout>
+        --><!-- Place new controls here --><!--
+        <Button Text="Login" Clicked="Button_Clicked"/>
+        <Button Text="Driver" Clicked="Button_Clicked_1"/>
+        <Button Text="Company" Clicked="Button_Clicked_2"/>
+    </StackLayout>-->
+    <xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient IsRotationTopToBottom="True">
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
+            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>
+
+</MasterDetailPage>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             x:Class="MiChofer.Master" Title="Master"
+             xmlns:local="clr-namespace:MiChofer.Models"
+    xmlns:vm="clr-namespace:MiChofer.UI.ViewModels"
+             
+    xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms">
+
+    <!--<xfg:ContentPageGloss.BackgroundGradient>
+        <xfg:Gradient IsRotationTopToBottom="True">
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
+            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
+            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
+        </xfg:Gradient>
+    </xfg:ContentPageGloss.BackgroundGradient>-->
+
+
+    <StackLayout HorizontalOptions="Center" BackgroundColor="#c63b3f">
+
+        <StackLayout BackgroundColor="White">
+            <Image Source="logo_bg_white.png"  HorizontalOptions="CenterAndExpand" Margin="20,20" HeightRequest="150" WidthRequest="150"/>
+
+            <ListView x:Name="listView" x:FieldModifier="public" ItemsSource="{Binding MasterPageItems}"
+                   VerticalOptions="EndAndExpand"
+                  SeparatorVisibility="None"
+                  BackgroundColor="#c63b3f"
+                  >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!-- Main design for our menu items -->
+                        <StackLayout VerticalOptions="FillAndExpand"
+                             Orientation="Horizontal"
+                             Padding="20,15,20,0"
+                             Spacing="20" >
+                            <Image Source="{Binding IconSource}"
+                                 WidthRequest="20"
+                                 HeightRequest="20"
+                                 VerticalOptions="Center" />
+                            <Label Text="{Binding Title}"
+                                 FontSize="20"
+                                 VerticalOptions="Center"
+                                 TextColor="White"/>
+                            
+                        </StackLayout>
+                    </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Padding="20,30" BackgroundColor=" #c63b3f">
+                <Label Text="{Binding Name}" FontSize="20"
+                                     VerticalOptions="Center"
+                                     TextColor="White" />
+            </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
