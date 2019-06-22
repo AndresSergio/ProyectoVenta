@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <color name="colorSplashScreen">#1B3974</color>
+    <color name="colorSplashScreen">#21958A</color>
   
     <color name="launcher_background">#FFFFFF</color>
-    <color name="colorPrimary">#c63b3f</color>
+    <color name="colorPrimary">#C0C6C4</color>
     <color name="colorPrimaryDark">#771E1C</color>
     <color name="colorAccent">#294B95</color>
 

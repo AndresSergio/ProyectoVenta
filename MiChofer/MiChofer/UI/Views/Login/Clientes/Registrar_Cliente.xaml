@@ -1,53 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MiChofer.UI.CustomRenderer"
-             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             Title="Crear nuevo Cliente" BackgroundImage="fondo.png"
              x:Class="MiChofer.UI.Views.Login.Clientes.Registrar_Cliente">
 
-
-    <xfg:ContentPageGloss.BackgroundGradient>
-        <xfg:Gradient IsRotationTopToBottom="True">
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
-            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
-
-        </xfg:Gradient>
-    </xfg:ContentPageGloss.BackgroundGradient>
     
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Padding="20,0">
+        <StackLayout VerticalOptions="Center" Padding="60,0">
 
-            <local:ImageEntry 
-                        PlaceholderColor="#CCC" FontSize="17"
-                        Image="user" ImageWidth="15" ImageHeight="15"
-                        Placeholder="Nombre" BGColor="White" CornerRadius="20"
+            <Entry 
+                        PlaceholderColor="#B1B2AA" FontSize="17"
+                        
+                        Placeholder="Nombre"  HorizontalTextAlignment="Center"
                         HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40"/>
-            <local:ImageEntry 
-                        PlaceholderColor="#CCC" FontSize="17"
-                        Image="user" ImageWidth="15" ImageHeight="15"
-                        Placeholder="apellido" BGColor="White" CornerRadius="20"
-                        HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40"/>
-
-            <local:ImageEntry 
-                        PlaceholderColor="#CCC" FontSize="17"
-                        Image="carnet" ImageWidth="15" ImageHeight="15"
-                        Placeholder="Carnet" BGColor="White" CornerRadius="20"
+            <Entry 
+                        PlaceholderColor="#B1B2AA" FontSize="17"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="apellido" 
                         HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40"/>
 
-            <local:ImageEntry 
-                        PlaceholderColor="#CCC" FontSize="17"
-                        Image="phone" ImageWidth="15" ImageHeight="15" 
-                        Placeholder="Telefono" BGColor="White" CornerRadius="20"
+            <Entry 
+                        PlaceholderColor="#B1B2AA" FontSize="17"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="Carnet" 
+                        HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40"/>
+
+            <Entry 
+                        PlaceholderColor="#B1B2AA" FontSize="17"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="Telefono" 
                         HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40" Keyboard="Telephone"/>
             
-            <local:ImageEntry 
-                        PlaceholderColor="#CCC" FontSize="17"
-                        Image="location" ImageWidth="15" ImageHeight="15" 
-                        Placeholder="Dirección" BGColor="White" CornerRadius="20"
+            <Entry 
+                        PlaceholderColor="#B1B2AA" FontSize="17"
+                        HorizontalTextAlignment="Center"
+                        Placeholder="dirección" 
                         HorizontalOptions="FillAndExpand" Margin="0,5" HeightRequest="40"/>
 
-            <Button  Text="CREAR CUENTA" BackgroundColor="Blue" FontSize="13" BorderRadius="48" TextColor="White" HorizontalOptions="FillAndExpand" Margin="20,15" Clicked="Button_Clicked"/>
+            <Button  Text="CREAR CUENTA" BackgroundColor="#21958A" FontSize="13" BorderRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Margin="20,15" Clicked="Button_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>

@@ -1,18 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             Title="Productos" BackgroundImage="Fondo.png"
              xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
              x:Class="MiChofer.UI.Views.Login.Clientes.MenuPedidoPage">
-
-
-    <xfg:ContentPageGloss.BackgroundGradient>
-        <xfg:Gradient IsRotationTopToBottom="True">
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
-            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
-        </xfg:Gradient>
-    </xfg:ContentPageGloss.BackgroundGradient>
 
     <ContentPage.Content>
         <Grid>
@@ -22,10 +14,19 @@
             </Grid.ColumnDefinitions>
 
             <!--<ScrollView Orientation="Vertical" Grid.Column="1" >-->
-            <StackLayout Margin="-80,40,40,20" Grid.Column="1"  HorizontalOptions="Fill" VerticalOptions="FillAndExpand" >
-                <Label Text="Menú" HorizontalOptions="Start" FontSize="20"  FontAttributes="Bold" TextColor="Black" />
+            <StackLayout Margin="-80,20,40,20" Grid.Column="1"  HorizontalOptions="Fill" VerticalOptions="FillAndExpand" >
+                <Grid Padding="0,20,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*"/>
+                        <ColumnDefinition Width="7*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Buscar Producto :" HorizontalOptions="Start" Margin="0,-10" FontSize="15" Grid.Column="0"  FontAttributes="Bold" TextColor="Black" />
+                    <autocomplete:SfAutoComplete HeightRequest="50" Margin="0,-33,0,0" x:Name="autoComplete" Grid.Column="1" TextColor="#B1B2AA"  TextHighlightMode="FirstOccurrence" HighlightedTextColor="Red" SuggestionMode="StartsWith" NoResultsFoundText="No se encontro resultado"
+                                          ShowClearButton="true"/>
+                </Grid>
+                
 
-                <ListView x:Name="lista" ItemsSource="{Binding items}" RowHeight="180" SeparatorVisibility="None" >
+                <ListView x:Name="lista" ItemsSource="{Binding items}" RowHeight="180" SeparatorVisibility="None" Margin="0,10">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <!--<TextCell Text="{Binding Title}"/>-->

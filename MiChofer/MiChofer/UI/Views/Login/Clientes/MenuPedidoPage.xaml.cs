@@ -20,6 +20,20 @@ namespace MiChofer.UI.Views.Login.Clientes
             this.BindingContext = items;
             lista.ItemsSource = items.items;
 
+            List<String> countryNames = new List<String>
+            {
+                "Uganda",
+                "Ukraine",
+                "Canada",
+                "United Arab Emirates",
+                "France",
+                "United Kingdom",
+                "China",
+                "United States",
+                "Japan"
+            };
+            autoComplete.DataSource = countryNames;
+
         }
     }
 }

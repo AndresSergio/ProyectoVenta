@@ -1,16 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
+             Title="Lista de Clientes" BackgroundImage="Fondo.png"
              x:Class="MiChofer.UI.Views.Login.Clientes.Lista_de_clientes">
-
-    <xfg:ContentPageGloss.BackgroundGradient>
-        <xfg:Gradient IsRotationTopToBottom="True">
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
-            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
-        </xfg:Gradient>
-    </xfg:ContentPageGloss.BackgroundGradient>
 
     <ContentPage.Content>
         <Grid>
@@ -23,7 +15,7 @@
 
             <!--<ScrollView Orientation="Vertical" Grid.Column="1" >-->
             <StackLayout Margin="-80,10,40,0" Grid.Column="1" HorizontalOptions="Fill" VerticalOptions="FillAndExpand" >
-                <Button Text="Crear nuevo cliente" HorizontalOptions="End" FontSize="15" BackgroundColor="#c63b3f" BorderColor="Black" Clicked="Button_Clicked"/>
+                <Button Text="Crear nuevo cliente" HorizontalOptions="End" FontSize="15" BackgroundColor="Transparent"  BorderColor="Black" BorderWidth="1" Clicked="Button_Clicked"/>
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*"/>

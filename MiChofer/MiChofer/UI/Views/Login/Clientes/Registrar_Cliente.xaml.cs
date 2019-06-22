@@ -17,9 +17,9 @@ namespace MiChofer.UI.Views.Login.Clientes
 			InitializeComponent ();
 		}
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Lista_de_clientes());
+           await Navigation.PopAsync();
         }
     }
 }

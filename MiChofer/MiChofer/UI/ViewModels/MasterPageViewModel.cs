@@ -53,46 +53,27 @@ namespace MiChofer.UI.ViewModels
         {
             m_masterPageItems.Add(new MasterPageItem
             {
+                Title = "Promocion",
+                IconSource = "promociones.png",
+                TargetType = typeof(HomePage)
+            });
+
+            m_masterPageItems.Add(new MasterPageItem
+            {
                 Title = "Productos",
-                IconSource = "user.png",
+                IconSource = "carro.png",
                 TargetType = typeof(MenuPedidoPage)
             });
+         
+
             m_masterPageItems.Add(new MasterPageItem
             {
                 Title = "Clientes",
-                IconSource = "user.png",
+                IconSource = "usuario.png",
                 TargetType = typeof(Lista_de_clientes)
             });
-            m_masterPageItems.Add(new MasterPageItem
-            {
-                Title = "guardados",
-                IconSource = "user.png",
-                TargetType = typeof(Registrar_Cliente)
-            });
-            m_masterPageItems.Add(new MasterPageItem
-            {
-                Title = "galeria",
-                IconSource = "user.png",
-                TargetType = typeof(Registrar_Cliente)
-            });
-            m_masterPageItems.Add(new MasterPageItem
-            {
-                Title = "configuracion",
-                IconSource = "user.png",
-                TargetType = typeof(Registrar_Cliente)
-            });
-            m_masterPageItems.Add(new MasterPageItem
-            {
-                Title = "notificacion",
-                IconSource = "user.png",
-                TargetType = typeof(Registrar_Cliente)
-            });
-            m_masterPageItems.Add(new MasterPageItem
-            {
-                Title = "personas",
-                IconSource = "user.png",
-                TargetType = typeof(Registrar_Cliente)
-            });
+
+           
         }
 
 

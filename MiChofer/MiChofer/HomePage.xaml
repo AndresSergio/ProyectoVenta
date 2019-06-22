@@ -1,33 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xfg="clr-namespace:XFGloss;assembly=XFGloss"
-             x:Class="MiChofer.HomePage" Title="Home"
+             x:Class="MiChofer.HomePage" Title="Inicio" Padding="40,0" BackgroundImage="Fondo.png" 
+            
              xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
-             xmlns:colletion="clr-namespace:System.Collections.Generic;assembly=netstandard">
+             >
 
-    <xfg:ContentPageGloss.BackgroundGradient>
-        <xfg:Gradient IsRotationTopToBottom="True">
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage="0"/>
-            <xfg:GradientStep StepColor="#c63b3f" StepPercentage=".5"/>
-            <xfg:GradientStep StepColor="#294b95" StepPercentage="1"/>
-        </xfg:Gradient>
-    </xfg:ContentPageGloss.BackgroundGradient>
     
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Start" HorizontalOptions="Start" Padding="30" x:Name="Home">
-            <autocomplete:SfAutoComplete HeightRequest="60" x:Name="autoComplete"  TextColor="White"  TextHighlightMode="FirstOccurrence" HighlightedTextColor="Red" SuggestionMode="StartsWith" NoResultsFoundText="No se encontro resultado"
+        <StackLayout HorizontalOptions="CenterAndExpand" Padding="30" x:Name="Home">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"/>
+                    <ColumnDefinition Width="7.5*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Buscar : " TextColor="Black" Grid.Column="0" FontSize="15" />
+                <autocomplete:SfAutoComplete HeightRequest="50" Margin="-20,-20,0,0" x:Name="autoComplete" Grid.Column="1" TextColor="#B1B2AA"  TextHighlightMode="FirstOccurrence" HighlightedTextColor="Red" SuggestionMode="StartsWith" NoResultsFoundText="No se encontro resultado"
                                           ShowClearButton="true">
 
-                <!--<autocomplete:SfAutoComplete.ItemTemplate>
+                    <!--<autocomplete:SfAutoComplete.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Orientation="Horizontal">
                             <Image Source="User.png" WidthRequest="12"/>
                         </StackLayout>
                     </DataTemplate>
                 </autocomplete:SfAutoComplete.ItemTemplate>-->
-            </autocomplete:SfAutoComplete>
-            <Button Text="login" />
+                </autocomplete:SfAutoComplete>
+            </Grid>
         </StackLayout>
         
         
