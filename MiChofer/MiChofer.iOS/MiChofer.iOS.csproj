@@ -161,7 +161,7 @@
       <Version>0.9.4.1</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.3</Version>
+      <Version>13.0.2</Version>
     </PackageReference>
     <PackageReference Include="NGraphics">
       <Version>0.5.0</Version>
